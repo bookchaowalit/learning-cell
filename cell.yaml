@@ -1,0 +1,106 @@
+# Learning cell: an empty cell made from the retired SQLite tables (learning_challenges, learning_challenge_assignments).
+# The domain had no rows when it left the control plane (2026-10-11); new features are built here.
+cell: learning
+title: Learning
+resources:
+  challenge:
+    table: learning_challenges
+    plural: challenges
+    filters:
+    - challenge_type
+    - category
+    fields:
+      challenge_key:
+        type: text
+        required: true
+      track:
+        type: text
+        required: true
+      challenge_type:
+        type: enum
+        values:
+        - coding
+        - quiz
+        - study
+        - project
+        - competition
+        required: true
+      provider:
+        type: text
+        required: true
+      title:
+        type: text
+        required: true
+      description:
+        type: text
+      instructions:
+        type: text
+      url:
+        type: text
+      difficulty:
+        type: text
+      estimated_minutes:
+        type: int
+      rotation_order:
+        type: int
+        default: 0
+      tags_json:
+        type: text
+        default: '[]'
+      is_active:
+        type: int
+        default: 1
+      category:
+        type: text
+        default: coding
+      is_external:
+        type: int
+        default: 0
+      free_access:
+        type: int
+        default: 0
+      account_required:
+        type: int
+        default: 0
+      access_model:
+        type: text
+        default: local
+      access_notes:
+        type: text
+      access_source_url:
+        type: text
+  challenge-assignment:
+    table: learning_challenge_assignments
+    plural: challenge-assignments
+    filters:
+    - challenge_id
+    - status
+    fields:
+      challenge_id:
+        type: ref
+        to: challenge
+        required: true
+      assignment_date:
+        type: date
+        required: true
+      status:
+        type: enum
+        values:
+        - assigned
+        - in_progress
+        - completed
+        - skipped
+        default: assigned
+      score_percent:
+        type: int
+      time_spent_minutes:
+        type: real
+      solution_url:
+        type: text
+      notes:
+        type: text
+      started_at:
+        type: timestamp
+      completed_at:
+        type: timestamp
+
