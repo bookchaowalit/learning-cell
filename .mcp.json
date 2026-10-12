@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "learning": {
+      "command": ".venv/bin/learning-mcp",
+      "args": []
+    }
+  }
+}
