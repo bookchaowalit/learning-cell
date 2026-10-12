@@ -8,8 +8,8 @@ HTTP with the caller's token.
 
 | | |
 |---|---|
-| API | Railway project `solo-learning`, service `learning-api` (Serverless) |
-| Data | Neon project `solo-learning`, database `learning` |
+| API | Railway project `learning-cell`, service `learning-api` (Serverless) |
+| Data | Neon project `learning-cell`, database `learning` |
 | Registry | solo-empire `repository-catalog/registries/online-systems.yaml` (`learning`) |
 
 ## API
