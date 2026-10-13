@@ -1,5 +1,4 @@
-# learning-cell
-
+# life-learning-api
 The Learning cell: its own API (Railway, serverless) and its own Neon
 database, described by `cell.yaml` and served by the code in `src/cellkit/`, which
 this repository owns. It
@@ -8,8 +7,8 @@ HTTP with the caller's token.
 
 | | |
 |---|---|
-| API | Railway project `learning-cell`, service `learning-api` (Serverless) |
-| Data | Neon project `learning-cell`, database `learning` |
+| API | Railway project `life-learning-api`, service `learning-api` (Serverless) |
+| Data | Neon project `life-learning-api`, database `learning` |
 | Registry | solo-empire `repository-catalog/registries/online-systems.yaml` (`learning`) |
 
 ## API
